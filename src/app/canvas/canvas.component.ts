@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Circle } from './controllers/Circle';
 
 @Component({
   selector: 'app-canvas',
@@ -20,5 +21,12 @@ export class CanvasComponent implements OnInit {
 
   ngOnInit(): void {
     this.ctx = this.canvas.nativeElement.getContext('2d');
+    this.animate()
+  }
+  animate () {
+    this.ctx.fillStyle = 'red';
+    const circle = new Circle(this.ctx);
+    circle.draw(20, 20);
+    this.ctx.fill()
   }
 }
