@@ -1,3 +1,4 @@
+import { Board } from './controllers/Board';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Circle } from './controllers/Circle';
 
@@ -5,10 +6,6 @@ import { Circle } from './controllers/Circle';
   selector: 'app-canvas',
   templateUrl: './canvas.component.html',
   styleUrls: ['./canvas.component.css'],
-  template: `
-    <canvas #canvas width="300" height="300"></canvas>
-    <button (click)="animate()">Play</button>
-  `,
   styles: ['canvas { border-style: solid }']
 })
 export class CanvasComponent implements OnInit {
@@ -24,9 +21,14 @@ export class CanvasComponent implements OnInit {
     this.animate()
   }
   animate () {
+<<<<<<< HEAD
     this.ctx.fillStyle = 'red';
     const circle = new Circle(this.ctx);
     circle.draw(20, 20);
     this.ctx.fill()
+=======
+    const board = new Board(this.ctx)
+    board.BackgroundCirclePsition()
+>>>>>>> feature/view_canvas_robson
   }
 }
