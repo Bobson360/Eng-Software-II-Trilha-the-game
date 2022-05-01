@@ -1,13 +1,10 @@
+import { Board } from './controllers/Board';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-canvas',
   templateUrl: './canvas.component.html',
   styleUrls: ['./canvas.component.css'],
-  template: `
-    <canvas #canvas width="300" height="300"></canvas>
-    <button (click)="animate()">Play</button>
-  `,
   styles: ['canvas { border-style: solid }']
 })
 export class CanvasComponent implements OnInit {
@@ -20,5 +17,10 @@ export class CanvasComponent implements OnInit {
 
   ngOnInit(): void {
     this.ctx = this.canvas.nativeElement.getContext('2d');
+    this.animate()
+  }
+  animate () {
+    const board = new Board(this.ctx)
+    board.BackgroundCirclePsition()
   }
 }
