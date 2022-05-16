@@ -1,4 +1,6 @@
+import { Line } from './Line';
 import { Circle } from './Circle';
+import { Rect } from './Rect';
 export class Board {
   constructor(private ctx: CanvasRenderingContext2D) {}
 
@@ -14,5 +16,19 @@ export class Board {
     ]
     const backgCir = new Circle(this.ctx);
     backgCir.draw({coords:coords})
+
+    const rect = new Rect(this.ctx);
+    rect.draw(50, 50, 400, 400);
+    rect.draw(100, 100, 300, 300);
+    rect.draw(150, 150, 200, 200);
+
+    const line = new Line(this.ctx);
+    //VERTICAL LINES
+    line.draw(250, 50, 250,150 );
+    line.draw(250, 350, 250,450 );
+
+    //HORIZONTAL LINES
+    line.draw(50, 250, 150,250 );
+    line.draw(350, 250, 450,250 );
   }
 }
