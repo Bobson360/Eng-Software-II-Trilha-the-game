@@ -4,8 +4,8 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 @Component({
   selector: 'app-canvas',
   templateUrl: './canvas.component.html',
-  styleUrls: ['./canvas.component.css'],
-  styles: ['canvas { border-style: solid }']
+  styleUrls: ['./canvas.component.scss'],
+  styles: ['canvas { border-style: solid; border: 100px solid #0a0a0aea }']
 })
 export class CanvasComponent implements OnInit {
   @ViewChild('canvas', { static: true })

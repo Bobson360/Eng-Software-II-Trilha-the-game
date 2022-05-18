@@ -6,7 +6,7 @@ export class Board {
 
   BackgroundCirclePsition(){
     const rect = new Rect(this.ctx);
-    rect.draw(0, 0, 500, 500, "black")
+    rect.draw(0, 0, 500, 500, "#fff")
 
     rect.draw(50, 50, 400, 400);
     rect.draw(100, 100, 300, 300);
