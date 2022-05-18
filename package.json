@@ -1,6 +1,6 @@
 {
   "name": "trilha",
-  "version": "0.0.0",
+  "version": "0.1.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -55,8 +55,6 @@
     "tslint": "~6.1.0",
     "typescript": "~3.8.3"
   },
-  "engines": {
-    "node": "16.15.0",
-    "npm": "8.5.5"
-  }
+
+  "engines": { "node": "14.x", "npm": "8.5.5" }
 }
