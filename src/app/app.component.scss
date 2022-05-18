@@ -1,81 +1,15 @@
 .center {
   display: flex;
   justify-content: center;
+  margin: 0 auto;
 }
+
 
 .trilha-game {
-  width: auto;
-  left: 0;
-  top:0;
+    display: flex;
+    justify-content: center;
+    padding: 68px;
 }
 
-.grid-container {
-  position: relative;
-  padding-top: 100px;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-}
-
-.control-panel{
-  justify-self: center;
-  grid-area: 1 / 1 / 5 / 3;
-  min-height: 60vh;
-  width: 50%;
-  padding: 32px;
-  backdrop-filter: blur(16px) saturate(180%);
-  -webkit-backdrop-filter: blur(16px) saturate(180%);
-  background-color: rgba(17, 25, 40, 0.54);
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.125);
-}
-
-.board {
-  grid-area: 1 / 3 / 5 / 6;
-  justify-self: center;
-}
-
-.trilha-container {
-  /* Container takes full size */
-  height: 100%;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-
-  background: #0f2027;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #0f2027, #203a43, #2c5364);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  z-index: 9999;
-}
-
-.container__overlay {
-  /* Take full size */
-  height: 100%;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-
-  /* User still can see the content of main page */
-  background-color: rgba(0, 0, 0, 0.5);
-
-  z-index: -1;
-}
-
-.container__sidebar {
-  /* Take full height */
-  height: 100%;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 200px;
-
-  /* Background */
-  background-color: #fff;
-}
+// .control-panel-container { grid-area: 1 / 1 / 2 / 6; }
+// .canvas-container { grid-area: 2 / 1 / 5 / 6; }

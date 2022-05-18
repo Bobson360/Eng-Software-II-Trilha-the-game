@@ -1,21 +1,9 @@
-
 <section class="trilha-game">
-  <div class="grid-container">
-    <div class="control-panel grid-item">
-      <form id="start-form">
-        <h3>Player 1</h3>
-        <h3 class="white">Player 2</h3>
-        <button type="submit">
-            Start Game
-        </button>
-        <button type="button">
-            Stop Game
-        </button>
-    </form>
-    </div>
-    <div class="board grid-item">
-      <app-canvas></app-canvas>
-    </div>
+  <div class="control-panel-container float-left">
+    <app-control-panel></app-control-panel>
+  </div>
+  <div class="canvas-container float-right">
+    <app-canvas></app-canvas>
   </div>
 </section>
 

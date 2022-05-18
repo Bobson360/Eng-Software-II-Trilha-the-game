@@ -1,0 +1,49 @@
+.control-panel{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 400px;
+  width: 20vw;
+  min-width: 200px;
+  min-height: 380px;
+  height: 50vh;
+  padding: 32px;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.54);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  margin: 0px 50px;
+  .panel-info{
+    color: white;
+    .panel-title{
+      text-align: center;
+      font-family: 'Quicksand';
+      margin: 20px 0px 32px;
+    }
+    .player{
+      margin: 15px 0px;
+      font-size: 18px;
+      font-family: 'Quicksand';
+    }
+  }
+
+
+  .button-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+
+
+    .custom-primary{
+      color: white;
+      background: #4ea93b !important;
+    }
+    .sound{
+      background-color: transparent;
+      border: unset;
+    }
+  }
+
+}
