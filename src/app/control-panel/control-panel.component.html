@@ -18,7 +18,8 @@
       Restart Game
     </button>
     <button class="sound" (click)="toggleSound()" type="button">
-      <i class="bi-volume-up-fill" style="font-size: 2rem; color: white;"></i>
+      <i [ngClass]="isAudioPlaying ? 'bi-volume-mute-fill': 'bi-volume-up-fill'" style="font-size: 2rem; color: white;"></i>
     </button>
+
   </div>
 </div>

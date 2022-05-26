@@ -19,6 +19,20 @@ body {
   background-position: 50% 50%;
 }
 
+* {
+  color: white;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.white{
+  color:white !important;
+}
+
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
 

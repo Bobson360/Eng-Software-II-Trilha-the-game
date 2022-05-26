@@ -15,10 +15,10 @@ export class ControlPanelComponent implements OnInit {
     this.audio.src = "./../assets/audio/game-sound.wav";
     this.audio.load();
     this.audio.loop = true;
-    setTimeout(()=>{
-      this.playSound();
-      this.isAudioPlaying = true;
-    },1000)
+    this.isAudioPlaying = true;
+    setTimeout(()=> {
+      this.playSound()
+    } ,1000)
   }
 
   playSound(){
