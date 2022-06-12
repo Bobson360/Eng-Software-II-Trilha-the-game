@@ -6,23 +6,23 @@
         <div class="row">
           <div class="col-sm-6">
             <label for="playerOne" class="form-label">PLAYER 1</label>
-            <input type="text" class="form-control" id="playerOne" placeholder="Digite o nome do Player 1">
+            <input type="text" ngModel name="playerOne" [(ngModel)]="playerOne" [ngModelOptions]="{standalone: true}" class="form-control" id="playerOne" placeholder="Digite o nome do Player 1">
             <label for="colorOne" class="form-label my-4 mr-4">Escolha a cor</label>
-            <input placeholder="Digite o nome do Player 1" type="color" id="colorOne" value="#00ff00">
+            <input ngModel name="colorPlayerOne" [(ngModel)]="colorPlayerOne" [ngModelOptions]="{standalone: true}" placeholder="Digite o nome do Player 1" type="color" id="colorOne">
           </div>
 
           <div class="col-sm-6">
             <label for="playerTwo" class="form-label">PLAYER 2</label>
-            <input type="text" class="form-control" id="playerTwo" placeholder="Digite o nome do Player 2">
+            <input type="text" ngModel name="playerTwo" [(ngModel)]="playerTwo" class="form-control" id="playerTwo" placeholder="Digite o nome do Player 2">
             <label for="colortwo" class="form-label my-4 mr-4">Escolha a cor</label>
-            <input type="color" id="colorTwo" value="#ffff00">
+            <input  ngModel name="colorPlayerTwo" [(ngModel)]="colorPlayerTwo" type="color" id="colorTwo">
           </div>
 
         </div>
 
         <hr class="my-4">
 
-        <button class="w-100 btn btn-primary btn-lg white" type="submit">JOGAR</button>
+        <button class="w-100 btn btn-primary btn-lg white"(click)="play()">JOGAR</button>
       </form>
     </div>
   </div>
