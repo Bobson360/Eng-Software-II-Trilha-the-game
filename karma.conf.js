@@ -18,9 +18,30 @@ module.exports = function (config) {
     coverageIstanbulReporter: {
       dir: require('path').join(__dirname, './coverage/trilha'),
       reports: ['html', 'lcovonly', 'text-summary'],
-      fixWebpackSourcePaths: true
+      fixWebpackSourcePaths: true,
+      thresholds: {
+        emitWarning: false, // set to `true` to not fail the test command when thresholds are not met
+        // thresholds for all files
+        global: {
+          statements: 70,
+          lines: 70,
+          branches: 60,
+          functions: 70
+        }
+      }
     },
-    reporters: ['progress', 'kjhtml'],
+    thresholds: {
+      emitWarning: false, // set to `true` to not fail the test command when thresholds are not met
+      // thresholds for all files
+      global: {
+        statements: 70,
+        lines: 70,
+        branches: 60,
+        functions: 70
+      }
+    },
+    // reporters: ['progress', 'kjhtml'],
+    reporters: ['coverage-istanbul'],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
