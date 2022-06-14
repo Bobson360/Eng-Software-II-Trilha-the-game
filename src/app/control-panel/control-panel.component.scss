@@ -6,7 +6,8 @@
   width: 20vw;
   min-width: 200px;
   min-height: 380px;
-  height: 50vh;
+  height: fit-content;
+  max-height: 60hv;
   padding: 32px;
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
@@ -21,10 +22,17 @@
       font-family: 'Quicksand';
       margin: 20px 0px 32px;
     }
-    .player{
+    .player, .player-text{
       margin: 15px 0px;
       font-size: 18px;
       font-family: 'Quicksand';
+      font-weight: 500;
+    }
+    .turn, .turn-player{
+      font-size: 24px;
+      text-align: center;
+      font-family: 'Quicksand';
+      margin: 20px 0px 32px;
     }
   }
 

@@ -22,7 +22,4 @@ export class Circle {
       this.ctx.fill();
   }
 
-  background(){
-
-  }
 }

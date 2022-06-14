@@ -1,24 +1,41 @@
 <div class="control-panel">
   <div class="panel-info">
     <h2 class="panel-title">Trilha</h2>
-    <h3 class="player">Player 1</h3>
-    <input type="color" value="#ffff00">
-    <h3 class="player">Player 2</h3>
-    <input type="color" value="#00ff00">
+    <div class="row">
+      <div class="col-4">
+        <h3 class="player">{{ playerOneName ?  playerOneName : 'Player 1' }}</h3>
+        <input ngModel name="colorPlayerOne" [(ngModel)]="playerOneColor" type="color" disabled="true">
+      </div>
+      <div class="col-8">
+        <h3 class="player-text">Peças livres: </h3>
+        <h3 class="player-text">{{piecesPlayerOne}}</h3>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-4">
+        <h3 class="player">{{ playerTwoName ?  playerTwoName : 'Player 2' }}</h3>
+        <input ngModel name="colorPlayerTwo" [(ngModel)]="playerTwoColor" type="color" disabled="true">
+      </div>
+      <div class="col-8">
+        <h3 class="player-text">Peças livres: </h3>
+        <h3 class="player-text">{{piecesPlayerTwo}} </h3>
+      </div>
+    </div>
+    <h3 class="turn">Turno:</h3>
+    <p class="turn-player">{{playerTwoName ? playerTwoName: '----'}}</p>
   </div>
   <audio #audioOption>
     <source src='../../assets/audio/game-sound.wav' type="audio/wav">
   </audio>
 
   <div class="button-wrapper">
-    <button type="button" class="btn btn-outline custom-primary mx-2">
-      Start Game
-    </button>
     <button class="btn btn-secondary mx-2" type="button">
       Restart Game
     </button>
     <button class="sound" (click)="toggleSound()" type="button">
-      <i [ngClass]="isAudioPlaying ? 'bi-volume-mute-fill': 'bi-volume-up-fill'" style="font-size: 2rem; color: white;"></i>
+      <i [ngClass]="isAudioPlaying ? 'bi-volume-up-fill':'bi-volume-mute-fill'" style="font-size: 2rem; color: white;"></i>
     </button>
 
   </div>
