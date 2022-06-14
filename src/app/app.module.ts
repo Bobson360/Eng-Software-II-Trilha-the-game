@@ -6,17 +6,23 @@ import { AppComponent } from './app.component';
 import { CanvasComponent } from './canvas/canvas.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ControlPanelComponent } from './control-panel/control-panel.component';
+import { FormComponent } from './form/form.component';
+import { GameComponent } from './game/game.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     CanvasComponent,
-    ControlPanelComponent
+    ControlPanelComponent,
+    FormComponent,
+    GameComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,8 +1,18 @@
+import { PlayersInfoService } from './../../services/players-info.service';
 import { Line } from './Line';
 import { Circle } from './Circle';
 import { Rect } from './Rect';
 export class Board {
-  constructor(private ctx: CanvasRenderingContext2D) {}
+  playerOneColor:string;
+  playerTwoColor:string;
+  constructor(
+    private ctx: CanvasRenderingContext2D,
+    playerOneColor:string,
+    playerTwoColor:string
+  ) {
+    this.playerOneColor = playerOneColor;
+    this.playerTwoColor = playerTwoColor;
+  }
 
   BackgroundCirclePsition(){
     const rect = new Rect(this.ctx);
@@ -34,10 +44,8 @@ export class Board {
     for(var i = 0; i < coords.length; i++){
       backgCir.draw({coords:[coords[i][0],coords[i][1]]})
     }
-    backgCir.draw({coords:[coords[0][0],coords[0][1]], color: "#0f0"})
-    backgCir.draw({coords:[coords[1][0],coords[1][1]], color: "#ff0"})
-
-
+    backgCir.draw({coords:[15,250], color: this.playerOneColor})
+    backgCir.draw({coords:[485,250], color: this.playerTwoColor})
 
   }
 }
